@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.btnAdd = new System.Windows.Forms.Button();
+            this.tvCategory = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(625, 48);
+            this.btnAdd.Location = new System.Drawing.Point(700, 32);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(123, 43);
             this.btnAdd.TabIndex = 0;
@@ -41,14 +42,24 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // tvCategory
+            // 
+            this.tvCategory.Location = new System.Drawing.Point(24, 48);
+            this.tvCategory.Name = "tvCategory";
+            this.tvCategory.Size = new System.Drawing.Size(303, 283);
+            this.tvCategory.TabIndex = 1;
+            this.tvCategory.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvCategory_NodeMouseClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(851, 461);
+            this.Controls.Add(this.tvCategory);
             this.Controls.Add(this.btnAdd);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Категорії";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -56,5 +67,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TreeView tvCategory;
     }
 }
