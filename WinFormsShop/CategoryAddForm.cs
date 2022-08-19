@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using Image = System.Drawing.Image;
 
 namespace WinFormsShop
 {
@@ -30,6 +32,18 @@ namespace WinFormsShop
         public CategoryAddForm()
         {
             InitializeComponent();
+        }
+
+        private void pbImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                mImage=ofd.FileName;
+                pbImage.Image=Image.FromFile(ofd.FileName);
+                //MessageBox.Show("Open file", ofd.FileName);
+            }
         }
     }
 }

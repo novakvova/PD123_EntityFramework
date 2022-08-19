@@ -97,8 +97,10 @@
             this.pbImage.Location = new System.Drawing.Point(16, 242);
             this.pbImage.Name = "pbImage";
             this.pbImage.Size = new System.Drawing.Size(160, 151);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImage.TabIndex = 3;
             this.pbImage.TabStop = false;
+            this.pbImage.Click += new System.EventHandler(this.pbImage_Click);
             // 
             // btnAdd
             // 
