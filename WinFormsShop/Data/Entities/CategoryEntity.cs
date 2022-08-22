@@ -23,5 +23,7 @@ namespace WinFormsShop.Data.Entities
         [ForeignKey("Parent")]
         public int ? ParentId { get; set; }
         public virtual CategoryEntity Parent { get; set; }
+
+        public virtual IList<ProductEntity> Products { get; set; }
     }
 }

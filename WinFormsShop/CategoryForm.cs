@@ -15,9 +15,9 @@ using WinFormsShop.Helpers;
 
 namespace WinFormsShop
 {
-    public partial class MainForm : Form
+    public partial class CategoryForm : Form
     {
-        public MainForm()
+        public CategoryForm()
         {
             InitializeComponent();
         }

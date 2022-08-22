@@ -1,6 +1,6 @@
 ﻿namespace WinFormsShop
 {
-    partial class MainForm
+    partial class CategoryForm
     {
         /// <summary>
         ///  Required designer variable.
