@@ -106,5 +106,16 @@ namespace WinFormsShop
             }
             //MessageBox.Show(item.Id.ToString());
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            var select = tvCategory.SelectedNode;
+            if(select!=null)
+            {
+                var catEdit = select.Tag as CategoryEntity;
+                MessageBox.Show(catEdit.Id.ToString());
+            }
+
+        }
     }
 }

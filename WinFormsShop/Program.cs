@@ -28,14 +28,36 @@ namespace WinFormsShop
             {
                 if(!dataContext.Categories.Any())
                 {
-                    CategoryEntity category = new CategoryEntity
+                    CategoryEntity laptop = new CategoryEntity
                     {
                         Image = "laptop.jpg",
                         DateCreated = DateTime.Now,
                         Priority = 1,
                         Title = "Ноутбуки"
                     };
-                    dataContext.Categories.Add(category);
+                    dataContext.Categories.Add(laptop);
+                    dataContext.SaveChanges();
+
+                    CategoryEntity game = new CategoryEntity
+                    {
+                        Image = "game.png",
+                        DateCreated = DateTime.Now,
+                        Priority = 2,
+                        ParentId=laptop.Id,
+                        Title = "Ігрові"
+                    };
+                    dataContext.Categories.Add(game);
+                    dataContext.SaveChanges();
+
+                    CategoryEntity ofice = new CategoryEntity
+                    {
+                        Image = "office.jpg",
+                        DateCreated = DateTime.Now,
+                        Priority = 3,
+                        ParentId = laptop.Id,
+                        Title = "Офісні"
+                    };
+                    dataContext.Categories.Add(ofice);
                     dataContext.SaveChanges();
                     //MessageBox.Show("Тут категоірй немає");
                 }
