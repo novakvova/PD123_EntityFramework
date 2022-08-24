@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EmailSendLib\EmailSendLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="images\32_laptop.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

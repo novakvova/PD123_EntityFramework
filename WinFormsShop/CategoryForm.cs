@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EmailSendLib.Abstracts;
+using EmailSendLib.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -116,6 +118,27 @@ namespace WinFormsShop
                 MessageBox.Show(catEdit.Id.ToString());
             }
 
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EmailSendLib.Message message = new EmailSendLib.Message();
+                message.Body = "Привіт <b>козак</b>!";
+                message.Subject = "Мені уже 18 :)";
+                message.To = "novakvova@gmail.com";
+
+                IEmailService emailService = new SmtpEmailService();
+                emailService.Send(message);
+                //string data = sender.ReadEmailDataPop3();
+                //Console.WriteLine(data);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Problem send", ex.Message);
+            }
         }
     }
 }

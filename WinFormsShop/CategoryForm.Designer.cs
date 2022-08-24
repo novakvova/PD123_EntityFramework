@@ -31,6 +31,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.tvCategory = new System.Windows.Forms.TreeView();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.btnSend = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -61,11 +62,22 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(700, 95);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(123, 51);
+            this.btnSend.TabIndex = 2;
+            this.btnSend.Text = "Надіслати";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
             // CategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 461);
+            this.Controls.Add(this.btnSend);
             this.Controls.Add(this.tvCategory);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
@@ -81,5 +93,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TreeView tvCategory;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnSend;
     }
 }
