@@ -140,5 +140,12 @@ namespace WinFormsShop
                 MessageBox.Show("Problem send", ex.Message);
             }
         }
+
+        private void btnSendMessage_Click(object sender, EventArgs e)
+        {
+            SMSService smsService = new SMSService();
+            string result = smsService.Send(txtPhone.Text, txtMessage.Text);
+            MessageBox.Show(result);
+        }
     }
 }
